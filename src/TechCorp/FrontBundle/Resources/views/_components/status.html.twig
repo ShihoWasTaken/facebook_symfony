@@ -1,0 +1,69 @@
+<div class="row status-container bordered">
+    <div class="col-md-12">
+        <p class="author">Par <a href="{{ path ('tech_corp_front_user_timeline', { userId :
+                status.user.id } ) }}">{{ status.user.username }}</a></p>
+        <p>{{ status.content }}</p>
+        <p class="date">le {{ status.createdAt|date('Y-m-d H:i:s') }}</p>
+    </div>
+    <div class="col-md-12"><hr></div>
+    <div class="comment-count">
+        {% if status.comments.count == 0 %}
+            Aucun commentaire
+        {% else %}
+            <a onclick="afficher();">
+            {% if status.comments.count == 1 %}
+                Afficher le commentaire
+            {% else %}
+                 Afficher les {{ status.comments.count }} commentaires
+            {% endif %}
+            </a>
+        {% endif %}
+    </div>
+    <script>
+        visible = true;
+        function afficher() {
+            if(visible)
+            {
+                $('.comment-container').slideUp('fast');
+            }
+            else
+            {
+                $('.comment-container').slideDown('fast');
+            }
+            visible = !visible;
+        }
+    </script>
+    <div class="col-md-12"><hr></div>
+    <div class="comment-container">
+        {% for comment in status.comments %}
+            <div class="row comment">
+                <div class="col-md-2">
+                    <img class="profile-picture-comment" src="{{ asset('bundles/techcorpfront/images/profile-pic.jpg') }}" />
+                </div>
+                <div class="col-md-10">
+                    <p class="author"><a href="{{ path ('tech_corp_front_user_timeline',
+                        { userId : comment.user.id } ) }}"> {{ comment.user.username }}</a></p>
+                    <p>{{ comment.content }}</p>
+                    <p class="date">le {{ comment.createdAt|date('Y-m-d H:i:s') }}</p>
+                </div>
+            </div>
+            {% if not loop.last %}
+                <div clas="row"><hr class="comment-separator" /></div>
+            {% endif %}
+        {% endfor %}
+
+        {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+            <div class="row">
+                <div class="col-md-12">
+                    <form action="{{ path ('tech_corp_front_comment_add', { statusId : status.id } ) }}" method="POST">
+                        <div class="form-group">
+                            <label for="commentText" class="comment-title">Ajouter un commentaire : </label>
+                            <textarea class="form-control" rows="3" id="commentText" name="commentText"></textarea>
+                        </div>
+                        <input class="btn btn-primary" type="submit" value="Envoyer le commentaire" />
+                    </form>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+</div>

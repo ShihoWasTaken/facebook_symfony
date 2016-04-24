@@ -1,0 +1,11 @@
+{% extends 'TechCorpFrontBundle::layout.html.twig' %}
+
+{% block content %}
+	<div class="jumbotron">
+		<div class="container">
+			<h1>{{ 'home_page.title'|trans }}</h1>
+			<p>{{ 'home_page.content'|trans }}</p>
+			<p><a class="btn btn-primary btn-lg" role="button" href="{{	url('tech_corp_front_about') }}">{{ 'home_page.more'|trans }}</a></p>
+		</div>
+	</div>
+{% endblock content %}

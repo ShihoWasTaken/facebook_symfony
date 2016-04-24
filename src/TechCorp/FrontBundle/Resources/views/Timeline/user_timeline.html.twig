@@ -1,0 +1,86 @@
+{% extends 'TechCorpFrontBundle::layout.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {% stylesheets 'bundles/techcorpfront/css/*' filter='cssrewrite, uglifycss' %}
+        <link rel="stylesheet" href="{{ asset_url }}" />
+    {% endstylesheets %}
+{% endblock stylesheets %}
+
+{% block javascripts_body %}
+    {{ parent() }}
+    <script src="{{ asset ('bundles/techcorpfront/js/manage-friends.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
+    <script src="{{ path('fos_js_routing_js', {"callback": "fos.Router.setData"}) }}"></script>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row timeline-top bordered">
+            <div class="col-xs-4 col-md-4">
+                <img class="profile-picture-timeline" src="{{ asset('bundles/techcorpfront/images/profile-pic.jpg') }}" />
+            </div>
+            <div class="col-xs-3 col-md-3 timeline-username">
+                <h1>{{ user.username }}</h1>
+            </div>
+            <div class="col-xs-3 col-md-3 timeline-friend-button">
+
+                {% if is_granted('IS_AUTHENTICATED_REMEMBERED') and app.user != user %}
+                    {% if not app.user.hasFriend(user) %}
+                        <button class="btn btn-primary add-friend" data-user-id="{{ user.id }}"><i class="fa fa-user-plus" aria-hidden="true"></i> Ajouter à
+                            la liste d'amis</button>
+                    {% else %}
+                        <button class="btn btn-primary remove-friend" data-user-id="{{ user.id }}"><i class="fa fa-user-times" aria-hidden="true"></i> Supprimer de la liste d'amis</button>
+                    {% endif %}
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 friends-container">
+                <div class="row bordered">
+                    <h4><i class="fa fa-users" aria-hidden="true"></i> Amis ({{ user.friends.count }})</h4>
+                    {% for currFriend in user.friends %}
+                        <div class="col-md-4">
+                            <p class="text-center">{{ currFriend.username }}</p>
+                            <img class="friend-picture" src="{{ asset('bundles/techcorpfront/images/profile-pic.jpg') }}" />
+                        </div>
+                    {% else %}
+                        <p>Cet utilisateur n'a pas ajouté d'ami.</p>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="col-md-8">
+                {% if is_granted('IS_AUTHENTICATED_REMEMBERED') and app.user == user %}
+                    <div class="row bordered publish">
+                        {{ form_start(form) }}
+                        {{ form_errors(form) }}
+                        <div>
+                            <h4>Publier un statut</h4>
+                            {{ form_errors(form.content) }}
+                            {{ form_widget(form.content) }}
+                        </div>
+                        <div class="col-md-12"><hr></div>
+                        <input class="btn btn-primary" type="submit" value="Publier" />
+                        {{ form_end(form) }}
+                    </div>
+                {% endif %}
+
+                {% if statuses != null %}
+                    <div class="statuses-container">
+                        {% for status in statuses %}
+                            {% include 'TechCorpFrontBundle:_components:status.html.twig' with {'status':status} %}
+                            {% if not loop.last %}
+                                <hr class="status-separator" />
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    <p>
+                        Cet utilisateur n'a pour le moment rien publié.
+                    </p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock content %}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/home/shiho/public_html/eyrolles/src/TechCorp/FrontBundle/Form/StatusType.php</file>
+            <file>file:/home/shiho/public_html/eyrolles/src/TechCorp/FrontBundle/Resources/config/routing_dev.yml</file>
+            <file>file:/home/shiho/public_html/eyrolles/src/TechCorp/FrontBundle/Resources/views/Timeline/user_timeline.html.twig</file>
+            <file>file:/home/shiho/public_html/eyrolles/app/config/routing.yml</file>
+            <file>file:/home/shiho/public_html/eyrolles/src/TechCorp/FrontBundle/DataFixtures/ORM/LoadUserData.php</file>
+            <file>file:/home/shiho/public_html/eyrolles/src/TechCorp/FrontBundle/Resources/config/services.yml</file>
+            <file>file:/home/shiho/public_html/eyrolles/app/AppKernel.php</file>
+            <file>file:/home/shiho/public_html/eyrolles/app/Resources/FOSUserBundle/views/layout.html.twig</file>
+            <file>file:/home/shiho/public_html/eyrolles/app/config/config.yml</file>
+            <file>file:/home/shiho/public_html/eyrolles/src/TechCorp/FrontBundle/Resources/config/routing.yml</file>
+            <file>file:/home/shiho/public_html/eyrolles/app/config/routing_dev.yml</file>
+            <file>file:/home/shiho/public_html/eyrolles/src/TechCorp/FrontBundle/Entity/Status.php</file>
+            <file>file:/home/shiho/public_html/eyrolles/src/TechCorp/FrontBundle/Entity/User.php</file>
+            <file>file:/home/shiho/public_html/eyrolles/src/TechCorp/FrontBundle/Controller/TimelineController.php</file>
+            <file>file:/home/shiho/public_html/eyrolles/composer.json</file>
+            <file>file:/home/shiho/public_html/eyrolles/src/TechCorp/FrontBundle/Resources/views/_components/navigation.html.twig</file>
+            <file>file:/home/shiho/public_html/eyrolles/app/config/security.yml</file>
+        </group>
+    </open-files>
+</project-private>

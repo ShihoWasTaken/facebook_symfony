@@ -1,0 +1,124 @@
+.status-container
+{
+    margin-top: 10px;
+    padding: 10px;
+}
+img
+{
+    width: 100%;
+    height: auto;
+}
+
+.profile-picture-timeline
+{
+    width: 200px;
+    height: auto;
+}
+
+.publish
+{
+    margin-top: 10px;
+    padding: 10px;
+}
+.timeline-top
+{
+    position: relative;
+    background-color: #fff;
+    padding: 5px;
+}
+
+.bordered
+{
+    border: 1px solid;
+    border-color: #e5e6e9 #dfe0e4 #d0d1d5;
+    border-radius: 3px;
+    background-color: white;
+}
+.friends-container
+{
+    margin-top: 10px;
+    padding-right: 25px;
+}
+.timeline-username
+{
+    position: absolute;
+    bottom: 0;
+    left: 220px;
+}
+
+.timeline-friend-button
+{
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+}
+
+.profile-picture-comment
+{
+    width: 70px;
+    height: auto;
+}
+
+.comment-container{
+}
+
+.comment
+{
+}
+
+.comment-count
+{
+    padding: 0 20px;
+}
+.status-container .author,
+.comment-container .author,
+.comment-container .comment-title {
+    font-weight:bold;
+}
+.status-container .date,
+.comment-container .date {
+    font-style:italic;
+}
+.status-separator {
+    border-color: lightblue;
+    width: 50%;
+}
+
+.comment-separator {
+    border-color: #eee;
+    width: 100%;
+}
+
+body
+{
+    padding-top: 70px;
+    background-color: #e9eaed;
+}
+
+textarea
+{
+    resize: none;
+}
+
+.navbar-inverse {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAqCAMAAABFoMFOAAAAWlBMV…8/UxBxQDQuFwlpqgBZBq6+P+unVY1GnDgwqbD2zGz5e1lBdwvGGPE6OgAAAABJRU5ErkJggg==);
+    background-repeat: repeat-x;
+    background-size: auto;
+    background-position: 0 0;
+    background-color: #3a5795;
+    border-bottom: 1px solid #103480;
+    box-shadow: 0 2px 2px -2px rgba(0, 0, 0, .82);
+    color: #fff;
+}
+
+.btn-primary
+{
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAqCAMAAABFoMFOAAAAWlBMV…8/UxBxQDQuFwlpqgBZBq6+P+unVY1GnDgwqbD2zGz5e1lBdwvGGPE6OgAAAABJRU5ErkJggg==);
+    background-repeat: repeat-x;
+    background-size: auto;
+    background-position: 0 0;
+    background-color: #3a5795;
+    border-bottom: 1px solid #103480;
+    box-shadow: 0 2px 2px -2px rgba(0, 0, 0, .82);
+    color: #fff;
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="en" datatype="plaintext" original="file.ext">
+    <body>
+      <trans-unit id="5e9d05803979c49468409f06e57739a8" resname="about_page.title">
+        <source>about_page.title</source>
+        <target>__about_page.title</target>
+      </trans-unit>
+      <trans-unit id="86679cd88883e7468081627ebc8ab4da" resname="about_page.content">
+        <source>about_page.content</source>
+        <target>__about_page.content</target>
+      </trans-unit>
+      <trans-unit id="8226f9cc30bf6eb747d35ad8ca883b68" resname="home_page.title">
+        <source>home_page.title</source>
+        <target>Welcome</target>
+      </trans-unit>
+      <trans-unit id="cb860fb81fb2537011a15df1fbd0c049" resname="home_page.content">
+        <source>home_page.content</source>
+        <target>__home_page.content</target>
+      </trans-unit>
+      <trans-unit id="1bf7c3de099dce82f150b368166f8f8e" resname="home_page.more">
+        <source>home_page.more</source>
+        <target>More</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

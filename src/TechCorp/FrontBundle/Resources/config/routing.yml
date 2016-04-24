@@ -1,0 +1,30 @@
+tech_corp_front_homepage:
+    path:     /
+    defaults: { _controller: TechCorpFrontBundle:Static:homepage }
+    
+tech_corp_front_about:
+    path:     /about
+    defaults: { _controller: TechCorpFrontBundle:Static:about }
+
+tech_corp_front_user_timeline:
+    path: /timeline/{userId}
+    defaults: { _controller: TechCorpFrontBundle:Timeline:userTimeline }
+  
+tech_corp_front_friends_timeline:
+    path: /friends_timeline/{userId}
+    defaults: { _controller: TechCorpFrontBundle:Timeline:friendsTimeline }
+
+tech_corp_front_user_add_friend:
+  path: /user/add-friend/{friendId}
+  defaults: { _controller: TechCorpFrontBundle:User:addFriend }
+  requirements: { method: POST }
+
+tech_corp_front_user_remove_friend:
+  path: /user/remove-friend/{friendId}
+  defaults: { _controller: TechCorpFrontBundle:User:removeFriend }
+  requirements: { method: POST }
+
+tech_corp_front_comment_add:
+  path: /comment/add/{statusId}
+  defaults: { _controller: TechCorpFrontBundle:Comment:addComment }
+  requirements: { method: POST }
