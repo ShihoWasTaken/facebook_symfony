@@ -10,7 +10,7 @@
         {% if status.comments.count == 0 %}
             Aucun commentaire
         {% else %}
-            <a onclick="afficher();">
+            <a>
             {% if status.comments.count == 1 %}
                 Afficher le commentaire
             {% else %}
@@ -19,20 +19,6 @@
             </a>
         {% endif %}
     </div>
-    <script>
-        visible = true;
-        function afficher() {
-            if(visible)
-            {
-                $('.comment-container').slideUp('fast');
-            }
-            else
-            {
-                $('.comment-container').slideDown('fast');
-            }
-            visible = !visible;
-        }
-    </script>
     <div class="col-md-12"><hr></div>
     <div class="comment-container">
         {% for comment in status.comments %}

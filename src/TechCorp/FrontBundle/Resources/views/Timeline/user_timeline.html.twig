@@ -10,6 +10,7 @@
 {% block javascripts_body %}
     {{ parent() }}
     <script src="{{ asset ('bundles/techcorpfront/js/manage-friends.js') }}" type="text/javascript"></script>
+    <script src="{{ asset ('bundles/techcorpfront/js/display-comments.js') }}" type="text/javascript"></script>
     <script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
     <script src="{{ path('fos_js_routing_js', {"callback": "fos.Router.setData"}) }}"></script>
 {% endblock %}
@@ -42,8 +43,10 @@
                     <h4><i class="fa fa-users" aria-hidden="true"></i> Amis ({{ user.friends.count }})</h4>
                     {% for currFriend in user.friends %}
                         <div class="col-md-4">
-                            <p class="text-center">{{ currFriend.username }}</p>
-                            <img class="friend-picture" src="{{ asset('bundles/techcorpfront/images/profile-pic.jpg') }}" />
+                            <a href="{{ path('tech_corp_front_user_timeline', {"userId": currFriend.id}) }}">
+                                <p class="text-center">{{ currFriend.username }}</p>
+                                <img class="friend-picture" src="{{ asset('bundles/techcorpfront/images/profile-pic.jpg') }}" />
+                            </a>
                         </div>
                     {% else %}
                         <p>Cet utilisateur n'a pas ajouté d'ami.</p>
@@ -70,9 +73,6 @@
                     <div class="statuses-container">
                         {% for status in statuses %}
                             {% include 'TechCorpFrontBundle:_components:status.html.twig' with {'status':status} %}
-                            {% if not loop.last %}
-                                <hr class="status-separator" />
-                            {% endif %}
                         {% endfor %}
                     </div>
                 {% else %}
