@@ -3,7 +3,7 @@
         <p class="author">Par <a href="{{ path ('tech_corp_front_user_timeline', { userId :
                 status.user.id } ) }}">{{ status.user.username }}</a></p>
         <p>{{ status.content }}</p>
-        <p class="date">le {{ status.createdAt|date('Y-m-d H:i:s') }}</p>
+        <p class="date">{{ status.createdAt|elapsed|since }}</p>
     </div>
     <div class="col-md-12"><hr></div>
     <div class="comment-count">
@@ -30,7 +30,7 @@
                     <p class="author"><a href="{{ path ('tech_corp_front_user_timeline',
                         { userId : comment.user.id } ) }}"> {{ comment.user.username }}</a></p>
                     <p>{{ comment.content }}</p>
-                    <p class="date">le {{ comment.createdAt|date('Y-m-d H:i:s') }}</p>
+                    <p class="date">{{ comment.createdAt|elapsed|since }}</p>
                 </div>
             </div>
             {% if not loop.last %}

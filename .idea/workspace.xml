@@ -3,9 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="11f66e57-9a32-4254-bdaf-bc0377f2247b" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/TechCorp/FrontBundle/Resources/config/services.yml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TechCorp/FrontBundle/Controller/UserController.php" afterPath="$PROJECT_DIR$/src/TechCorp/FrontBundle/Controller/UserController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TechCorp/FrontBundle/DependencyInjection/TechCorpFrontExtension.php" afterPath="$PROJECT_DIR$/src/TechCorp/FrontBundle/DependencyInjection/TechCorpFrontExtension.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TechCorp/FrontBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/TechCorp/FrontBundle/Resources/config/routing.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TechCorp/FrontBundle/Component/Twig/ElapsedTwigFilterExtension.php" afterPath="$PROJECT_DIR$/src/TechCorp/FrontBundle/Component/Twig/ElapsedTwigFilterExtension.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TechCorp/FrontBundle/Resources/config/services.xml" afterPath="$PROJECT_DIR$/src/TechCorp/FrontBundle/Resources/config/services.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TechCorp/FrontBundle/Resources/translations/messages.fr.xlf" afterPath="$PROJECT_DIR$/src/TechCorp/FrontBundle/Resources/translations/messages.fr.xlf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TechCorp/FrontBundle/Resources/views/_components/status.html.twig" afterPath="$PROJECT_DIR$/src/TechCorp/FrontBundle/Resources/views/_components/status.html.twig" />
     </list>
     <ignored path="eyrolles.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -49,20 +50,50 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="services.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/TechCorp/FrontBundle/Resources/config/services.xml">
+      <file leaf-file-name="comment.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/TechCorp/FrontBundle/Resources/views/_components/comment.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.480769">
-              <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routing.yml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="services.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/TechCorp/FrontBundle/Resources/config/services.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.1923075">
+              <caret line="18" column="48" selection-start-line="18" selection-start-column="48" selection-end-line="18" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="status.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/TechCorp/FrontBundle/Resources/views/_components/status.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.44">
+              <caret line="32" column="36" selection-start-line="32" selection-start-column="36" selection-end-line="32" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user_timeline.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/TechCorp/FrontBundle/Resources/views/Timeline/user_timeline.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="8.055555">
+              <caret line="14" column="77" selection-start-line="14" selection-start-column="74" selection-end-line="14" selection-end-column="77" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routing.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/TechCorp/FrontBundle/Resources/config/routing.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.44573644">
+            <state vertical-scroll-proportion="0.0">
               <caret line="23" column="69" selection-start-line="23" selection-start-column="69" selection-end-line="23" selection-end-column="69" />
               <folding />
             </state>
@@ -95,14 +126,14 @@
         <option value="$PROJECT_DIR$/app/config/config.yml" />
         <option value="$PROJECT_DIR$/src/TechCorp/FrontBundle/Resources/public/css/style.css" />
         <option value="$PROJECT_DIR$/src/TechCorp/FrontBundle/Resources/views/_components/navigation.html.twig" />
-        <option value="$PROJECT_DIR$/src/TechCorp/FrontBundle/Resources/views/_components/status.html.twig" />
         <option value="$PROJECT_DIR$/src/TechCorp/FrontBundle/Resources/public/js/displayComments.js" />
         <option value="$PROJECT_DIR$/src/TechCorp/FrontBundle/Resources/views/Timeline/user_timeline.html.twig" />
         <option value="$PROJECT_DIR$/src/TechCorp/FrontBundle/Resources/public/js/display-comments.js" />
         <option value="$PROJECT_DIR$/src/TechCorp/FrontBundle/DependencyInjection/TechCorpFrontExtension.php" />
         <option value="$PROJECT_DIR$/src/TechCorp/FrontBundle/Controller/UserController.php" />
-        <option value="$PROJECT_DIR$/src/TechCorp/FrontBundle/Resources/config/services.xml" />
         <option value="$PROJECT_DIR$/src/TechCorp/FrontBundle/Resources/config/routing.yml" />
+        <option value="$PROJECT_DIR$/src/TechCorp/FrontBundle/Resources/config/services.xml" />
+        <option value="$PROJECT_DIR$/src/TechCorp/FrontBundle/Resources/views/_components/status.html.twig" />
       </list>
     </option>
   </component>
@@ -768,7 +799,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1919" y="0" width="1922" height="1047" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18177083" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1103,34 +1134,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TechCorp/FrontBundle/Resources/views/_components/comment.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TechCorp/FrontBundle/Resources/views/_components/status.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4">
-          <caret line="20" column="10" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/TechCorp/FrontBundle/Controller/TimelineController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.46">
           <caret line="25" column="80" selection-start-line="25" selection-start-column="80" selection-end-line="25" selection-end-column="80" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TechCorp/FrontBundle/Resources/views/Timeline/user_timeline.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.48">
-          <caret line="74" column="115" selection-start-line="74" selection-start-column="115" selection-end-line="74" selection-end-column="115" />
           <folding />
         </state>
       </provider>
@@ -1179,16 +1186,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/TechCorp/FrontBundle/Resources/config/services.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.480769">
-          <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
+        <state vertical-scroll-proportion="-5.1923075">
+          <caret line="18" column="48" selection-start-line="18" selection-start-column="48" selection-end-line="18" selection-end-column="48" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/TechCorp/FrontBundle/Resources/config/routing.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44573644">
+        <state vertical-scroll-proportion="0.0">
           <caret line="23" column="69" selection-start-line="23" selection-start-column="69" selection-end-line="23" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TechCorp/FrontBundle/Resources/views/_components/comment.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TechCorp/FrontBundle/Resources/views/Timeline/user_timeline.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="8.055555">
+          <caret line="14" column="77" selection-start-line="14" selection-start-column="74" selection-end-line="14" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TechCorp/FrontBundle/Resources/views/_components/status.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.44">
+          <caret line="32" column="36" selection-start-line="32" selection-start-column="36" selection-end-line="32" selection-end-column="36" />
           <folding />
         </state>
       </provider>

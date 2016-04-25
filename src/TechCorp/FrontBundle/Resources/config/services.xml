@@ -16,5 +16,9 @@ http://symfony.com/schema/dic/services/services-1.0.xsd">
 			<argument type="service" id="security.context"/>
 			<argument type="service" id="techcorp.friendservice"/>
 		</service>
+		<service id="techcorp.elapsed_extension" class="TechCorp\FrontBundle\Component\Twig\ElapsedTwigFilterExtension">
+			<argument type="service" id="translator"/>
+			<tag name="twig.extension" />
+		</service>
 	</services>
 </container>

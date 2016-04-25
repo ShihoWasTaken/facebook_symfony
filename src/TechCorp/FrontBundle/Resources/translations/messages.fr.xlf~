@@ -22,6 +22,38 @@
         <source>home_page.more</source>
         <target>En savoir plus</target>
       </trans-unit>
+      <trans-unit id="1" resname="techcorp.elapsed.one.second">
+<source>techcorp.elapsed.one.second</source>
+<target>Il y a 1 seconde.</target>
+</trans-unit>
+<trans-unit id="2" resname="techcorp.elapsed.many.second">
+<source>techcorp.elapsed.many.second</source>
+<target>Il y a %nbSeconds% secondes.</target>
+</trans-unit>
+<trans-unit id="3" resname="techcorp.elapsed.one.minute">
+<source>techcorp.elapsed.one.minute</source>
+<target>Il y a 1 minute.</target>
+</trans-unit>
+<trans-unit id="4" resname="techcorp.elapsed.many.minute">
+<source>techcorp.elapsed.many.minute</source>
+<target>Il y a %nbMinutes% minutes.</target>
+</trans-unit>
+<trans-unit id="5" resname="techcorp.elapsed.one.hour">
+<source>techcorp.elapsed.one.hour</source>
+<target>Il y a 1 heure.</target>
+</trans-unit>
+<trans-unit id="6" resname="techcorp.elapsed.many.hour">
+<source>techcorp.elapsed.many.hour</source>
+<target>Il y a %nbHours% heures.</target>
+</trans-unit>
+<trans-unit id="7" resname="techcorp.elapsed.one.day">
+<source>techcorp.elapsed.one.day</source>
+<target>Il y a 1 jour.</target>
+</trans-unit>
+<trans-unit id="8" resname="techcorp.elapsed.many.day">
+<source>techcorp.elapsed.many.day</source>
+<target>Il y a %nbDays% jours.</target>
+</trans-unit>
     </body>
   </file>
 </xliff>
