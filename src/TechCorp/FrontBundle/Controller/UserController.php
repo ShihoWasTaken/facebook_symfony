@@ -2,47 +2,44 @@
 
 namespace TechCorp\FrontBundle\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
-
-class UserController extends Controller
+use Symfony\Component\Security\Core\SecurityContextInterface;
+use TechCorp\FrontBundle\Services\FriendService;
+class UserController
 {
-    private function manageFriendAction($friendId, $addFriend = true)
-    {
-        $em = $this->getDoctrine()->getManager();
-        $friend = $em->getRepository('TechCorpFrontBundle:user')->findOneById($friendId);
-        $authenticatedUser = $this->get('security.context')->getToken()->getUser();
-        if (!$friend)
-        {
-            return new Response("Utilisateur inexistant", 400);
-        }
-        if (!$authenticatedUser)
-        {
-            return new Response("Authentification nécessaire", 401);
-        }
-        if ($addFriend)
-        {
-            if (!$authenticatedUser->hasFriend($friend))
-            {
-                $authenticatedUser->addFriend($friend);
-            }
-        }
-        else
-        {
-            $authenticatedUser->removeFriend($friend);
-        }
-        $em->persist($authenticatedUser);
-        $em->flush();
-        return new Response("OK");
+    private $securityContext;
+    private $friendService;
+    public function __construct (
+        SecurityContextInterface $securityContext,
+FriendService $friendService) {
+$this->securityContext = $securityContext;
+$this->friendService = $friendService;
+}
+public function addFriendAction($friendId){
+    $authenticatedUser = $this->securityContext->getToken()->getUser();
+    $response = new Response("OK");
+    if (!$authenticatedUser) {
+        $response = new Response("Authentification nécessaire", 401);
     }
-
-    public function addFriendAction($friendId)
-    {
-        return $this->manageFriendAction($friendId, true);
+    else {
+        if (!$this->friendService->addFriend($authenticatedUser, $friendId)) {
+$response = new Response("Utilisateur inexistant", 400);
+}
     }
-
-    public function removeFriendAction($friendId)
-    {
-        return $this->manageFriendAction($friendId, false);
+    return $response;
+}
+public function removeFriendAction($friendId){
+    $authenticatedUser = $this->securityContext->getToken()->getUser();
+    $response = new Response("OK");
+    if (!$authenticatedUser) {
+        $response = new Response("Authentification nécessaire", 401);
     }
+    else {
+        if (!$this->friendService->removeFriend($authenticatedUser,
+            $friendId)) {
+$response = new Response("Utilisateur inexistant", 400);
+}
+    }
+    return $response;
+}
 }

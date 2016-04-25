@@ -16,12 +16,12 @@ tech_corp_front_friends_timeline:
 
 tech_corp_front_user_add_friend:
   path: /user/add-friend/{friendId}
-  defaults: { _controller: TechCorpFrontBundle:User:addFriend }
+  defaults: { _controller: techcorp.usercontroller:addFriendAction }
   requirements: { method: POST }
 
 tech_corp_front_user_remove_friend:
   path: /user/remove-friend/{friendId}
-  defaults: { _controller: TechCorpFrontBundle:User:removeFriend }
+  defaults: { _controller: techcorp.usercontroller:removeFriendAction }
   requirements: { method: POST }
 
 tech_corp_front_comment_add:
