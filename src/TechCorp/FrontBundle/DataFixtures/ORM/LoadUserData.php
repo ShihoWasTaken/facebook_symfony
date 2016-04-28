@@ -36,9 +36,10 @@ class LoadUserData extends AbstractFixture implements OrderedFixtureInterface, C
 			// On crée un nouvel utilisateur.
 			$user = new User();
 			$user->setUsername($faker->username);
-                        $user->setEmail($faker->email);
-                        $user->setPlainPassword($faker->password);
-                        $user->setEnabled(true);
+			$user->setEmail($faker->email);
+			$user->setPlainPassword($faker->password);
+			$user->setProfilepic($i . '.jpg');
+			$user->setEnabled(true);
 			$manager->persist($user);
 			$this->addReference('user'.$i, $user);
 		}
@@ -47,6 +48,7 @@ class LoadUserData extends AbstractFixture implements OrderedFixtureInterface, C
                 $user->setUsername('user');
                 $user->setEmail($faker->email);
                 $user->setPlainPassword('password');
+				$user->setProfilepic('11.jpg');
                 $user->setEnabled(true);
                 $manager->persist($user);
                 

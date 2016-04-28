@@ -6,6 +6,7 @@ use Doctrine\ORM\Mapping as ORM;
 use TechCorp\FrontBundle\Entity\Status;
 use Doctrine\Common\Collections\ArrayCollection;
 use FOS\UserBundle\Model\User as BaseUser;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity
@@ -50,6 +51,15 @@ class User extends BaseUser {
      * @ORM\ManyToMany(targetEntity="User", mappedBy="friends")
      * */
     private $friendsWithMe;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="profilepic", type="string", length=64)
+     * @Assert\NotBlank
+     * @Assert\Length(max=64)
+     */
+    private $profilepic;
 
     /**
      * Get id
@@ -208,5 +218,28 @@ class User extends BaseUser {
     public function getComments()
     {
         return $this->comments;
+    }
+
+    /**
+     * Set profilepic
+     *
+     * @param string $profilepic
+     * @return User
+     */
+    public function setProfilepic($profilepic)
+    {
+        $this->profilepic = $profilepic;
+
+        return $this;
+    }
+
+    /**
+     * Get profilepic
+     *
+     * @return string 
+     */
+    public function getProfilepic()
+    {
+        return $this->profilepic;
     }
 }

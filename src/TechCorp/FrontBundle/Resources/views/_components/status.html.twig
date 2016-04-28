@@ -1,7 +1,7 @@
 <div class="row status-container bordered">
     <div class="row">
         <div class="col-md-2">
-            <img class="profile-picture-statut" src="{{ asset('bundles/techcorpfront/images/profile-pic.jpg') }}" />
+            <img class="profile-picture-statut" src="{{ asset('bundles/techcorpfront/images/'~status.user.profilepic ) }}" />
         </div>
         <div class="col-md-10">
             <p class="author">Par <a href="{{ path ('tech_corp_front_user_timeline', { userId :
@@ -29,7 +29,7 @@
         {% for comment in status.comments %}
             <div class="row comment">
                 <div class="col-md-2">
-                    <img class="profile-picture-comment" src="{{ asset('bundles/techcorpfront/images/profile-pic.jpg') }}" />
+                    <img class="profile-picture-comment" src="{{ asset('bundles/techcorpfront/images/'~comment.user.profilepic) }}" />
                 </div>
                 <div class="col-md-10">
                     <p class="author"><a href="{{ path ('tech_corp_front_user_timeline',
