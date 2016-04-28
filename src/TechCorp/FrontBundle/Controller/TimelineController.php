@@ -10,9 +10,33 @@ class TimelineController extends Controller
 	{
 		$em = $this->getDoctrine()->getManager();
 		$statuses = $em->getRepository('TechCorpFrontBundle:Status')->findAll();
+
+        $authenticatedUser = $this->get('security.context')->getToken()->getUser();
+
+        $status = new Status();
+        $status->setDeleted(false);
+
+        $status->setUser($authenticatedUser);
+        $form = $this->createForm(new StatusType(), $status);
+        $request = $this->getRequest();
+        $form->handleRequest($request);
+
+        // 3) Traiter le formulaire
+        if ($authenticatedUser && $form->isValid()) {
+            $em->persist($status);
+            $em->flush();
+            $this->redirect($this->generateUrl(
+                'tech_corp_front_user_timeline', array(
+                'userId' => $authenticatedUser->getId()
+            ))
+            );
+        }
+
 		return $this->render('TechCorpFrontBundle:Timeline:timeline.html.twig',
 			array(
 				'statuses' => $statuses,
+                'user' => $authenticatedUser,
+                'form' => $form->createView(),
 			));
 	}
 

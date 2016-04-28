@@ -15,6 +15,11 @@ img
     height: auto;
 }
 
+.profile-picture-statut
+{
+    width: 80%;
+}
+
 .publish
 {
     margin-top: 10px;
@@ -69,6 +74,7 @@ img
 .comment-count
 {
     padding: 0 20px;
+    cursor: pointer;
 }
 .status-container .author,
 .comment-container .author,

@@ -28,6 +28,7 @@ return 'elapsed_extension';
 public function sinceFilter($nbSeconds)
 {
 $sentences = array (
+'{0} techcorp.elapsed.one.second',
 '{1} techcorp.elapsed.one.second',
 ']1,60[ techcorp.elapsed.many.second',
 '[60,120[ techcorp.elapsed.one.minute',

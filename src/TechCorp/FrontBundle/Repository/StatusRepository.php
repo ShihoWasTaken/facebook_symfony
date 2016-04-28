@@ -6,6 +6,12 @@ use Doctrine\ORM\EntityRepository;
 
 class StatusRepository extends EntityRepository {
 
+
+public function findAll()
+{
+    return $this->findBy(array(), array('createdAt' => 'DESC'));
+}
+
 public function getStatusesAndUsers ($deleted) {
 return $this->_em->createQuery("
 select s, u
