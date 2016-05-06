@@ -3,17 +3,23 @@
 		<div class="navbar-header">
 			<a class="navbar-brand" href="{{ url('tech_corp_front_homepage') }}">Facebook</a>
 			<ul class="nav navbar-nav">
-				<li><a href="{{ url('tech_corp_front_homepage') }}">Accueil</a></li>
+				<li><a href="{{ url('tech_corp_front_homepage') }}">{{ 'home_page.link'|trans }}</a></li>
                 {% if not is_granted('IS_AUTHENTICATED_REMEMBERED') %}
-                    <li><a href="{{ path('fos_user_registration_register') }}">S'inscrire</a></li>
-                    <li><a href="{{ path('fos_user_security_login') }}">Se connecter</a></li>
-                    <li><a href="{{ path('fos_user_resetting_request') }}">Mot de passe oublié ?</a></li>
+                    <li><a href="{{ path('fos_user_registration_register') }}">{{ 'register.link'|trans }}</a></li>
+                    <li><a href="{{ path('fos_user_security_login') }}">{{ 'login.link'|trans }}</a></li>
                 {% else %}
-                    <li><a href="{{ url('tech_corp_front_timeline') }}">Fil d'actualité</a></li>
-                    <li><a href="{{ path('tech_corp_front_user_timeline',{ userId : app.user.id }) }}">Mon profil</a></li>
-                    <li><a href="{{ url('tech_corp_front_about') }}">A propos</a></li>
-                    <li><a href="{{ path('fos_user_security_logout') }}">Se déconnecter</a></li>
+                    <li><a href="{{ url('tech_corp_front_timeline') }}">{{ 'newsfeed.link'|trans }}</a></li>
+                    <li><a href="{{ path('tech_corp_front_user_timeline',{ userId : app.user.id }) }}">{{ 'profile.link'|trans }}</a></li>
+                    <li><a href="{{ url('tech_corp_front_about') }}">{{ 'about.link'|trans }}</a></li>
+                    <li><a href="{{ path('fos_user_security_logout') }}">{{ 'logout.link'|trans }}</a></li>
                 {% endif %}
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ app.request.locale | upper }} <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{{ path('tech_corp_front_homepage', {"_locale": "fr"}) }}"><img class='flag' src='{{ asset('bundles/techcorpfront/images/flags/FR.png' ) }}' /> Français</a></li>
+                        <li><a href="{{ path('tech_corp_front_homepage', {"_locale": "en"}) }}"><img class='flag' src='{{ asset('bundles/techcorpfront/images/flags/EN.png' ) }}' /> English</a></li>
+                    </ul>
+                </li>
 			</ul>
 		</div>
 	</div>

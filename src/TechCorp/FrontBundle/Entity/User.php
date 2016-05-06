@@ -55,11 +55,10 @@ class User extends BaseUser {
     /**
      * @var string
      *
-     * @ORM\Column(name="profilepic", type="string", length=64)
-     * @Assert\NotBlank
+     * @ORM\Column(name="profilepic", type="string", length=64, nullable=true)
      * @Assert\Length(max=64)
      */
-    private $profilepic;
+    private $profilepic = null;
 
     /**
      * Get id

@@ -22,37 +22,73 @@
         <source>home_page.more</source>
         <target>En savoir plus</target>
       </trans-unit>
+      <trans-unit id="ed7fdc4df29fd31d03454dc340f4a99b" resname="techcorp.elapsed.now">
+        <source>techcorp.elapsed.now</source>
+        <target>A l'instant</target>
+      </trans-unit>
       <trans-unit id="7e1bef1bf710264cda2207762c85980e" resname="techcorp.elapsed.one.second">
         <source>techcorp.elapsed.one.second</source>
-        <target>Il y a 1 seconde.</target>
+        <target>Il y a 1 seconde</target>
       </trans-unit>
       <trans-unit id="6e9abf4edbda52dc81adee920c81ba01" resname="techcorp.elapsed.many.second">
         <source>techcorp.elapsed.many.second</source>
-        <target>Il y a %nbSeconds% secondes.</target>
+        <target>Il y a %nbSeconds% secondes</target>
       </trans-unit>
       <trans-unit id="844cb5c0980f4c16a0506d4197bca3e6" resname="techcorp.elapsed.one.minute">
         <source>techcorp.elapsed.one.minute</source>
-        <target>Il y a 1 minute.</target>
+        <target>Il y a 1 minute</target>
       </trans-unit>
       <trans-unit id="1501c960ca5d94b63b30cd8e121a98d1" resname="techcorp.elapsed.many.minute">
         <source>techcorp.elapsed.many.minute</source>
-        <target>Il y a %nbMinutes% minutes.</target>
+        <target>Il y a %nbMinutes% minutes</target>
       </trans-unit>
       <trans-unit id="330f4ca0e80d3b43202f418f888b1095" resname="techcorp.elapsed.one.hour">
         <source>techcorp.elapsed.one.hour</source>
-        <target>Il y a 1 heure.</target>
+        <target>Il y a 1 heure</target>
       </trans-unit>
       <trans-unit id="44edb2c8cb37272addb05952368d5512" resname="techcorp.elapsed.many.hour">
         <source>techcorp.elapsed.many.hour</source>
-        <target>Il y a %nbHours% heures.</target>
+        <target>Il y a %nbHours% heures</target>
       </trans-unit>
       <trans-unit id="46877e243f0b98f3ec35254d5c4556ce" resname="techcorp.elapsed.one.day">
         <source>techcorp.elapsed.one.day</source>
-        <target>Il y a 1 jour.</target>
+        <target>Il y a 1 jour</target>
       </trans-unit>
       <trans-unit id="3554cc57bf158265eb72e81c8f49525a" resname="techcorp.elapsed.many.day">
         <source>techcorp.elapsed.many.day</source>
-        <target>Il y a %nbDays% jours.</target>
+        <target>Il y a %nbDays% jours</target>
+      </trans-unit>
+      <trans-unit id="733b6f465ea342e22dc146f54708b309" resname="login.link">
+        <source>login.link</source>
+        <target>Connexion</target>
+      </trans-unit>
+      <trans-unit id="1151a6eb3900cd459706f764f5c3949c" resname="register.link">
+        <source>register.link</source>
+        <target>Créer un compte</target>
+      </trans-unit>
+      <trans-unit id="1fcf35c17bebdb68a87acf6b4c82feb8" resname="home_page.link">
+        <source>home_page.link</source>
+        <target>Accueil</target>
+      </trans-unit>
+      <trans-unit id="e054ef1d180095868984788bcaa8d0d6" resname="newsfeed.link">
+        <source>newsfeed.link</source>
+        <target>Actualités</target>
+      </trans-unit>
+      <trans-unit id="ef114ff71d3e5444076125e3902abd5e" resname="profile.link">
+        <source>profile.link</source>
+        <target>Mon profil</target>
+      </trans-unit>
+      <trans-unit id="5839257932ca341b525c41986919d8f1" resname="about.link">
+        <source>about.link</source>
+        <target>A propos</target>
+      </trans-unit>
+      <trans-unit id="7f5dc55533f61d32ee1b6bf1011880c5" resname="logout.link">
+        <source>logout.link</source>
+        <target>Déconnexion</target>
+      </trans-unit>
+      <trans-unit id="3713388c641e8af3573a227e98e2311f" resname="techcorp.form.password.confirmation">
+        <source>techcorp.form.password.confirmation</source>
+        <target>Retapez le mot de passe</target>
       </trans-unit>
     </body>
   </file>

@@ -1,18 +1,23 @@
 <div class="row status-container bordered">
     <div class="row">
         <div class="col-md-2">
-            <img class="profile-picture-statut" src="{{ asset('bundles/techcorpfront/images/'~status.user.profilepic ) }}" />
+            {% include 'TechCorpFrontBundle:_components:profilepic.html.twig' with {'user':status.user, 'class':'status', 'app':app} %}
         </div>
         <div class="col-md-10">
-            <p class="author">Par <a href="{{ path ('tech_corp_front_user_timeline', { userId :
-                    status.user.id } ) }}">{{ status.user.username }}</a></p>
+            <p class="author">Par
+                <a href="{{ path ('tech_corp_front_user_timeline', { userId: status.user.id } ) }}"
+                        {% include 'TechCorpFrontBundle:_components:popover.html.twig' with {'user': status.user, 'class':'popover', 'app':app} %}
+                >
+                    {{ status.user.username }}
+                </a>
+            </p>
             <p class="date">{{ status.createdAt|elapsed|since }}</p>
             <p>{{ status.content }}</p>
 
         </div>
     </div>
     <div class="col-md-12"><hr></div>
-    <div class="comment-count">
+    <div class="comment-count" id="comment-count-{{ status.id }}">
         <i class="fa fa-comments" aria-hidden="true"></i>
         {% if status.comments.count == 0 %}
             Aucun commentaire
@@ -29,11 +34,16 @@
         {% for comment in status.comments %}
             <div class="row comment">
                 <div class="col-md-2">
-                    <img class="profile-picture-comment" src="{{ asset('bundles/techcorpfront/images/'~comment.user.profilepic) }}" />
+                    {% include 'TechCorpFrontBundle:_components:profilepic.html.twig' with {'user':comment.user, 'class': 'comment', 'app':app} %}
                 </div>
                 <div class="col-md-10">
-                    <p class="author"><a href="{{ path ('tech_corp_front_user_timeline',
-                        { userId : comment.user.id } ) }}"> {{ comment.user.username }}</a></p>
+                    <p class="author">
+                        <a href="{{ path ('tech_corp_front_user_timeline',
+                        { userId : comment.user.id } ) }}" {% include 'TechCorpFrontBundle:_components:popover.html.twig' with {'user': comment.user, 'class':'popover', 'app':app} %}
+                        >
+                            {{ comment.user.username }}
+                        </a>
+                    </p>
                     <p>{{ comment.content }}</p>
                     <p class="date">{{ comment.createdAt|elapsed|since }}</p>
                 </div>
@@ -49,7 +59,7 @@
                     <form action="{{ path ('tech_corp_front_comment_add', { statusId : status.id } ) }}" method="POST">
                         <div class="form-group">
                             <label for="commentText" class="comment-title">Ajouter un commentaire : </label>
-                            <textarea class="form-control" rows="3" id="commentText" name="commentText"></textarea>
+                            <textarea class="form-control" rows="3" id="commentText-{{ status.id }}" name="commentText"></textarea>
                         </div>
                         <input class="btn btn-primary" type="submit" value="Envoyer le commentaire" />
                     </form>

@@ -11,7 +11,8 @@ class TimelineController extends Controller
 		$em = $this->getDoctrine()->getManager();
 		$statuses = $em->getRepository('TechCorpFrontBundle:Status')->findAll();
 
-        $authenticatedUser = $this->get('security.context')->getToken()->getUser();
+        //$authenticatedUser = $this->get('security.context')->getToken()->getUser();
+        $authenticatedUser = $this->getUser();
 
         $status = new Status();
         $status->setDeleted(false);
@@ -50,7 +51,8 @@ class TimelineController extends Controller
 			$this->createNotFoundException("L'utilisateur n'a pas été trouvé.");
 		}
                 
-                $authenticatedUser = $this->get('security.context')->getToken()->getUser();
+                //$authenticatedUser = $this->get('security.context')->getToken()->getUser();
+                $authenticatedUser = $this->getUser();
                 $status = new Status();
                 $status->setDeleted(false);
                 

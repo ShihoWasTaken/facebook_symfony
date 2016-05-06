@@ -19,7 +19,7 @@
     <div class="container">
         <div class="row timeline-top bordered">
             <div class="col-xs-4 col-md-4">
-                <img class="profile-picture-timeline" src="{{ asset('bundles/techcorpfront/images/'~user.profilepic) }}" />
+                {% include 'TechCorpFrontBundle:_components:profilepic.html.twig' with {'user':user, 'class': 'timeline', 'app':app} %}
             </div>
             <div class="col-xs-3 col-md-3 timeline-username">
                 <h1>{{ user.username }}</h1>
@@ -44,8 +44,7 @@
                     {% for currFriend in user.friends %}
                         <div class="col-md-4">
                             <a href="{{ path('tech_corp_front_user_timeline', {"userId": currFriend.id}) }}">
-                                <p class="text-center">{{ currFriend.username }}</p>
-                                <img class="friend-picture" src="{{ asset('bundles/techcorpfront/images/'~currFriend.profilepic) }}" />
+                                {% include 'TechCorpFrontBundle:_components:profilepic.html.twig' with {'user':currFriend, 'class':'friend', 'app':app} %}
                             </a>
                         </div>
                     {% else %}

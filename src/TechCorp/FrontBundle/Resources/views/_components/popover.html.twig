@@ -1,0 +1,12 @@
+{% if class != 'timeline' %}
+    data-popover="true" data-html=true
+    rel="popover" data-placement="bottom"
+    data-original-title="<img class='profile-picture-popover' src='{{ asset('bundles/techcorpfront/images/'~user.profilepic ) }}' /> {{ user.username }}"
+    {% if is_granted('IS_AUTHENTICATED_REMEMBERED') and app.user != user %}
+        {% if not app.user.hasFriend(user) %}
+            data-content="<button class='btn btn-primary add-friend' data-user-id='{{ user.id }}'><i class='fa fa-user-plus' aria-hidden='true'></i> Ajouter à la liste d'amis</button>"
+        {% else %}
+            data-content="<button class='btn btn-primary remove-friend' data-user-id='{{ user.id }}'><i class='fa fa-user-times' aria-hidden='true'></i> Supprimer de la liste d'amis</button>"
+        {% endif %}
+    {% endif %}
+{% endif %}

@@ -56,10 +56,9 @@ class User extends BaseUser {
      * @var string
      *
      * @ORM\Column(name="profilepic", type="string", length=64)
-     * @Assert\NotBlank
      * @Assert\Length(max=64)
      */
-    private $profilepic;
+    private $profilepic = null;
 
     /**
      * Get id
@@ -218,5 +217,28 @@ class User extends BaseUser {
     public function getComments()
     {
         return $this->comments;
+    }
+
+    /**
+     * Set profilepic
+     *
+     * @param string $profilepic
+     * @return User
+     */
+    public function setProfilepic($profilepic)
+    {
+        $this->profilepic = $profilepic;
+
+        return $this;
+    }
+
+    /**
+     * Get profilepic
+     *
+     * @return string 
+     */
+    public function getProfilepic()
+    {
+        return $this->profilepic;
     }
 }
