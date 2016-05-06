@@ -86,7 +86,7 @@
         <source>logout.link</source>
         <target>Déconnexion</target>
       </trans-unit>
-      <trans-unit id="9a16f67047bfd951ab38bc3e0e7a5d27" resname="techcorp.form.password.confirmation">
+      <trans-unit id="545" resname="techcorp.form.password.confirmation">
         <source>techcorp.form.password.confirmation</source>
         <target>Retapez le mot de passe</target>
       </trans-unit>

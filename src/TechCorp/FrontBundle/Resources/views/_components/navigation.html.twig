@@ -16,8 +16,8 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ app.request.locale | upper }} <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="{{ path('tech_corp_front_homepage', {"_locale": "fr"}) }}"><img class='flag' src='{{ asset('bundles/techcorpfront/images/flags/FR.png' ) }}' /> Français</a></li>
-                        <li><a href="{{ path('tech_corp_front_homepage', {"_locale": "en"}) }}"><img class='flag' src='{{ asset('bundles/techcorpfront/images/flags/EN.png' ) }}' /> English</a></li>
+                        <li><a href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')|merge({'_locale':'fr'}) ) }}"><img class='flag' src='{{ asset('bundles/techcorpfront/images/flags/FR.png' ) }}' /> Français</a></li>
+                        <li><a href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')|merge({'_locale':'en'}) ) }}"><img class='flag' src='{{ asset('bundles/techcorpfront/images/flags/EN.png' ) }}' /> English</a></li>
                     </ul>
                 </li>
 			</ul>

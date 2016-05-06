@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="fr" datatype="plaintext" original="file.ext">
+    <body>
+      <trans-unit id="9dbb4e93be23acd47c214cd7e1030121" resname="form.username">
+        <source>form.username</source>
+        <target>__form.username</target>
+      </trans-unit>
+      <trans-unit id="01b234fe1a185c3a9f3804f284fcc8e2" resname="form.email">
+        <source>form.email</source>
+        <target>__form.email</target>
+      </trans-unit>
+      <trans-unit id="5351aae16cf99cb2a1cd701770608927" resname="form.password">
+        <source>form.password</source>
+        <target>__form.password</target>
+      </trans-unit>
+      <trans-unit id="9a16f67047bfd951ab38bc3e0e7a5d27" resname="techcorp.form.password_confirmation">
+        <source>techcorp.form.password_confirmation</source>
+        <target>__techcorp.form.password_confirmation</target>
+      </trans-unit>
+      <trans-unit id="f71197a4e184b581df9cb4fc27955b79" resname="registration.submit">
+        <source>registration.submit</source>
+        <target>__registration.submit</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
