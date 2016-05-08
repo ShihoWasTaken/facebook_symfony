@@ -17,20 +17,7 @@
 
 {% block content %}
     <div class="container">
-        {% if is_granted('IS_AUTHENTICATED_REMEMBERED') and app.user == user %}
-            <div class="row bordered publish">
-                {{ form_start(form) }}
-                {{ form_errors(form) }}
-                <div>
-                    <h4>Publier un statut</h4>
-                    {{ form_errors(form.content) }}
-                    {{ form_widget(form.content) }}
-                </div>
-                <div class="col-md-12"><hr></div>
-                <input class="btn btn-primary" type="submit" value="Publier" />
-                {{ form_end(form) }}
-            </div>
-        {% endif %}
+        {% include 'TechCorpFrontBundle:_components:publish.html.twig' with {'app':app} %}
         {% if statuses != null %}
             <div class="statuses-container">
                 {% for status in statuses %}

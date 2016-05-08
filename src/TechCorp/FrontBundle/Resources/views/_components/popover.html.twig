@@ -1,12 +1,16 @@
 {% if class != 'timeline' %}
     data-popover="true" data-html=true
     rel="popover" data-placement="bottom"
-    data-original-title="<img class='profile-picture-popover' src='{{ asset('bundles/techcorpfront/images/'~user.profilepic ) }}' /> {{ user.username }}"
+    data-content="<div class='col-md-12 popover-name'>{{ user.username }}</div><div class='col-md-12'><img class='profile-picture-popover' src='{{ asset('bundles/techcorpfront/images/'~user.profilepic ) }}' /></div>
     {% if is_granted('IS_AUTHENTICATED_REMEMBERED') and app.user != user %}
+        <div class='row'><div class='col-md-12'><hr></div></div>
+        <div class='text-center'>
         {% if not app.user.hasFriend(user) %}
-            data-content="<button class='btn btn-primary add-friend' data-user-id='{{ user.id }}'><i class='fa fa-user-plus' aria-hidden='true'></i> Ajouter à la liste d'amis</button>"
+            <button class='btn btn-primary add-friend' data-user-id='{{ user.id }}'><i class='fa fa-user-plus' aria-hidden='true'></i> {{ 'friend.add'|trans }}</button>"
         {% else %}
-            data-content="<button class='btn btn-primary remove-friend' data-user-id='{{ user.id }}'><i class='fa fa-user-times' aria-hidden='true'></i> Supprimer de la liste d'amis</button>"
+            <button class='btn btn-primary remove-friend' data-user-id='{{ user.id }}'><i class='fa fa-user-times' aria-hidden='true'></i> {{ 'friend.remove'|trans }}</button>"
         {% endif %}
+    {% else %}
+        </div>"
     {% endif %}
 {% endif %}

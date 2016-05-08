@@ -24,7 +24,7 @@ $( document ).ready(function() {
             visibleComments = jQuery.grep(visibleComments, function(value) {
                 return value != idCount;
             });
-            $('#' + idCount).html($('#' + idCount).html().replace("Masquer","Afficher"));
+            $('#' + idCount).html($('#' + idCount).html().replace("Masquer","Afficher").replace("Hide","Show"));
         }
         else
         {
@@ -34,7 +34,7 @@ $( document ).ready(function() {
             goToByScroll(idTextArea);
             visibleComments.push(idCount);
             $('#' + idTextArea).focus();
-            $('#' + idCount).html($('#' + idCount).html().replace("Afficher","Masquer"));
+            $('#' + idCount).html($('#' + idCount).html().replace("Afficher","Masquer").replace("Show","Hide"));
         }
     });
 

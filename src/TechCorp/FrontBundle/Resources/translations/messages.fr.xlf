@@ -16,7 +16,15 @@
       </trans-unit>
       <trans-unit id="cb860fb81fb2537011a15df1fbd0c049" resname="home_page.content">
         <source>home_page.content</source>
-        <target>Ceci est la page d'accueil de notre application</target>
+        <target>
+        <![CDATA[
+        Voici mon application Facebook Symfony<br><br>
+        Vous pouvez vous connecter avec les identifiants suivants:<br>
+        Nom d'utilisateur - <strong>user</strong><br>
+        Mot de passe - <strong>password</strong><br><br>
+        Ou bien vous pouvez également créer votre propre compte en cliquant sur <strong>Inscription</strong>.
+        ]]>
+        </target>
       </trans-unit>
       <trans-unit id="1bf7c3de099dce82f150b368166f8f8e" resname="home_page.more">
         <source>home_page.more</source>
@@ -64,7 +72,7 @@
       </trans-unit>
       <trans-unit id="1151a6eb3900cd459706f764f5c3949c" resname="register.link">
         <source>register.link</source>
-        <target>Créer un compte</target>
+        <target>Inscription</target>
       </trans-unit>
       <trans-unit id="1fcf35c17bebdb68a87acf6b4c82feb8" resname="home_page.link">
         <source>home_page.link</source>
@@ -72,7 +80,7 @@
       </trans-unit>
       <trans-unit id="e054ef1d180095868984788bcaa8d0d6" resname="newsfeed.link">
         <source>newsfeed.link</source>
-        <target>Actualités</target>
+        <target>Fil d'actualité</target>
       </trans-unit>
       <trans-unit id="ef114ff71d3e5444076125e3902abd5e" resname="profile.link">
         <source>profile.link</source>
@@ -86,9 +94,49 @@
         <source>logout.link</source>
         <target>Déconnexion</target>
       </trans-unit>
-      <trans-unit id="3713388c641e8af3573a227e98e2311f" resname="techcorp.form.password.confirmation">
-        <source>techcorp.form.password.confirmation</source>
-        <target>Retapez le mot de passe</target>
+      <trans-unit id="afa492009c10a4f6097dc3be71f50fef" resname="status.publish">
+        <source>status.publish</source>
+        <target>Publier un statut</target>
+      </trans-unit>
+      <trans-unit id="9b6d0bb3102b87fae57bc4a39149518e" resname="publish">
+        <source>publish</source>
+        <target>Publier</target>
+      </trans-unit>
+      <trans-unit id="df3f079de6961496f0460dcfdbf9bca3" resname="by">
+        <source>by</source>
+        <target>par</target>
+      </trans-unit>
+      <trans-unit id="634aecbb1c625f73857b0737a1a1d4fb" resname="comment.none">
+        <source>comment.none</source>
+        <target>Aucun commentaire</target>
+      </trans-unit>
+      <trans-unit id="f02deae7f24628bc5a0e16c1b51075a9" resname="comment.one">
+        <source>comment.one</source>
+        <target>Afficher le commentaire</target>
+      </trans-unit>
+      <trans-unit id="c2f6c7577f523b5f83159ea8ca0a944c" resname="comment.many">
+        <source>comment.many</source>
+        <target>Afficher les %nbComments% commentaires</target>
+      </trans-unit>
+      <trans-unit id="5f6c52f8ef98dd0a54f537e82ce521aa" resname="comment.add">
+        <source>comment.add</source>
+        <target>Ajouter un commentaire</target>
+      </trans-unit>
+      <trans-unit id="7782f863685b556b8ae85c3e9668e149" resname="comment.send">
+        <source>comment.send</source>
+        <target>Enovyer le commentaire</target>
+      </trans-unit>
+      <trans-unit id="4105acd066e976c543ad1a0515b485c6" resname="friend.add">
+        <source>friend.add</source>
+        <target>Ajouter en ami</target>
+      </trans-unit>
+      <trans-unit id="42d6b8de109679e0cabe152b083f1571" resname="friend.remove">
+        <source>friend.remove</source>
+        <target>Supprimer cet ami</target>
+      </trans-unit>
+      <trans-unit id="28f20a02bf8a021fab4fcec48afb584e" resname="friends">
+        <source>friends</source>
+        <target>Amis</target>
       </trans-unit>
     </body>
   </file>

@@ -65,3 +65,5 @@ form:
     password_confirmation: Retapez le mot de passe
     new_password: 'Nouveau mot de passe'
     new_password_confirmation: Retapez le mot de passe
+custom:
+    forgot_password: Mot de passe oublié ?

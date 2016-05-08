@@ -8,9 +8,8 @@
                     <li><a href="{{ path('fos_user_registration_register') }}">{{ 'register.link'|trans }}</a></li>
                     <li><a href="{{ path('fos_user_security_login') }}">{{ 'login.link'|trans }}</a></li>
                 {% else %}
-                    <li><a href="{{ url('tech_corp_front_timeline') }}">{{ 'newsfeed.link'|trans }}</a></li>
+                    <li><a href="{{ url('tech_corp_front_friends_timeline') }}">{{ 'newsfeed.link'|trans }}</a></li>
                     <li><a href="{{ path('tech_corp_front_user_timeline',{ userId : app.user.id }) }}">{{ 'profile.link'|trans }}</a></li>
-                    <li><a href="{{ url('tech_corp_front_about') }}">{{ 'about.link'|trans }}</a></li>
                     <li><a href="{{ path('fos_user_security_logout') }}">{{ 'logout.link'|trans }}</a></li>
                 {% endif %}
                 <li class="dropdown">

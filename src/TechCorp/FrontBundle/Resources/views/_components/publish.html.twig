@@ -1,0 +1,14 @@
+{% if is_granted('IS_AUTHENTICATED_REMEMBERED') and app.user == user %}
+<div class="row bordered publish">
+    {{ form_start(form) }}
+    {{ form_errors(form) }}
+    <div>
+        <h4>{{ 'status.publish'|trans }}</h4>
+        {{ form_errors(form.content) }}
+        {{ form_widget(form.content) }}
+    </div>
+    <div class="col-md-12"><hr></div>
+    <input class="btn btn-primary" type="submit" value="{{ 'publish'|trans }}" />
+    {{ form_end(form) }}
+</div>
+{% endif %}

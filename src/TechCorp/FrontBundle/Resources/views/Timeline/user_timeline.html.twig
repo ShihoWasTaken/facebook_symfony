@@ -18,20 +18,19 @@
 {% block content %}
     <div class="container">
         <div class="row timeline-top bordered">
-            <div class="col-xs-4 col-md-4">
+            <div class="col-xs-3 col-md-3">
                 {% include 'TechCorpFrontBundle:_components:profilepic.html.twig' with {'user':user, 'class': 'timeline', 'app':app} %}
             </div>
-            <div class="col-xs-3 col-md-3 timeline-username">
+            <div class="col-xs-7 col-md-7 timeline-username">
                 <h1>{{ user.username }}</h1>
             </div>
-            <div class="col-xs-3 col-md-3 timeline-friend-button">
+            <div class="col-xs-2 col-md-2 timeline-friend-button">
 
                 {% if is_granted('IS_AUTHENTICATED_REMEMBERED') and app.user != user %}
                     {% if not app.user.hasFriend(user) %}
-                        <button class="btn btn-primary add-friend" data-user-id="{{ user.id }}"><i class="fa fa-user-plus" aria-hidden="true"></i> Ajouter à
-                            la liste d'amis</button>
+                        <button class="btn btn-primary add-friend" data-user-id="{{ user.id }}"><i class="fa fa-user-plus" aria-hidden="true"></i> {{ 'friend.add'|trans }}</button>
                     {% else %}
-                        <button class="btn btn-primary remove-friend" data-user-id="{{ user.id }}"><i class="fa fa-user-times" aria-hidden="true"></i> Supprimer de la liste d'amis</button>
+                        <button class="btn btn-primary remove-friend" data-user-id="{{ user.id }}"><i class="fa fa-user-times" aria-hidden="true"></i> {{ 'friend.remove'|trans }}</button>
                     {% endif %}
                 {% endif %}
             </div>
@@ -40,7 +39,7 @@
         <div class="row">
             <div class="col-md-4 friends-container">
                 <div class="row bordered">
-                    <h4><i class="fa fa-users" aria-hidden="true"></i> Amis ({{ user.friends.count }})</h4>
+                    <h4><i class="fa fa-users" aria-hidden="true"></i> {{ 'friends'|trans }} ({{ user.friends.count }})</h4>
                     {% for currFriend in user.friends %}
                         <div class="col-md-4">
                             <a href="{{ path('tech_corp_front_user_timeline', {"userId": currFriend.id}) }}">
@@ -53,20 +52,7 @@
                 </div>
             </div>
             <div class="col-md-8">
-                {% if is_granted('IS_AUTHENTICATED_REMEMBERED') and app.user == user %}
-                    <div class="row bordered publish">
-                        {{ form_start(form) }}
-                        {{ form_errors(form) }}
-                        <div>
-                            <h4>Publier un statut</h4>
-                            {{ form_errors(form.content) }}
-                            {{ form_widget(form.content) }}
-                        </div>
-                        <div class="col-md-12"><hr></div>
-                        <input class="btn btn-primary" type="submit" value="Publier" />
-                        {{ form_end(form) }}
-                    </div>
-                {% endif %}
+                {% include 'TechCorpFrontBundle:_components:publish.html.twig' with {'app':app} %}
 
                 {% if statuses != null %}
                     <div class="statuses-container">

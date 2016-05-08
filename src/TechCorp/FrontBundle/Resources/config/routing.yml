@@ -1,17 +1,13 @@
 tech_corp_front_homepage:
     path:     /
     defaults: { _controller: TechCorpFrontBundle:Static:homepage }
-    
-tech_corp_front_about:
-    path:     /about
-    defaults: { _controller: TechCorpFrontBundle:Static:about }
 
 tech_corp_front_user_timeline:
     path: /timeline/{userId}
     defaults: { _controller: TechCorpFrontBundle:Timeline:userTimeline }
   
 tech_corp_front_friends_timeline:
-    path: /friends_timeline/{userId}
+    path: /newsfeed
     defaults: { _controller: TechCorpFrontBundle:Timeline:friendsTimeline }
 
 tech_corp_front_user_add_friend:

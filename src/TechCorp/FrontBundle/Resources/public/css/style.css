@@ -33,7 +33,7 @@ img.profile-picture-friend {
 
 .profile-picture-popover
 {
-    width: 70px;
+    width: 100%;
     height: auto;
 }
 
@@ -141,6 +141,18 @@ textarea
     color: #fff;
 }
 
+.jumbotron
+{
+    background-color:  #e9eaed;
+}
+
+.jumbotron .container
+{
+    background-color: white;
+    padding: 20px;
+    padding-top: 0;
+}
+
 #form-login, #form-register, #form-reset
 {
     background-color: white;
@@ -163,4 +175,11 @@ textarea
 .flag
 {
     width: initial;
+}
+
+.popover-name
+{
+    font-size: 20px;
+    color: black;
+    text-align: center;
 }

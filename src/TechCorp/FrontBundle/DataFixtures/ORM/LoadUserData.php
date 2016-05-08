@@ -35,7 +35,7 @@ class LoadUserData extends AbstractFixture implements OrderedFixtureInterface, C
 		{
 			// On crée un nouvel utilisateur.
 			$user = new User();
-			$user->setUsername($faker->username);
+			$user->setUsername($faker->firstName . ' '.  $faker->lastName);
 			$user->setEmail($faker->email);
 			$user->setPlainPassword($faker->password);
 			$user->setProfilepic($i . '.jpg');
